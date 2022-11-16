@@ -1,0 +1,20 @@
+name: Linter
+
+on: [pull_request]
+
+jobs:
+  cpp-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: install clang-tidy
+        run: apt-get install -y clang-tidy
+      - name: linter-client
+        run: find ./Client/ -regex '.*\.\(cpp\|hpp\)' -exec clang-tidy {} -- \;
+      - name: linter-server
+        run: find ./Server/ -regex '.*\.\(cpp\|hpp\)' -exec clang-tidy {} -- \;
+      - name: linter-network
+        run: find ./libs/Network/ -regex '.*\.\(cpp\|hpp\)' -exec clang-tidy {} -- \;
+      - name: linter-ecs
+        run: find ./libs/ECS -regex '.*\.\(cpp\|hpp\)' -exec clang-tidy -I {} -- \;
+
