@@ -1,0 +1,20 @@
+/*
+** EPITECH PROJECT, 2022
+** R-Type
+** File description:
+** SpawnDesObstSystem
+*/
+
+#pragma once
+
+#include "Registry.hpp"
+
+namespace ECS {
+    class SpawnDesObstSystem : public System {
+        public:
+            SpawnDesObstSystem(Registry & registry);
+            std::vector<ECS::Info> callSystem(std::vector<std::any> & params) override;
+        private:
+            ECS::Registry & _registry;
+    };
+}

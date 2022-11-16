@@ -1,0 +1,5 @@
+if(EXISTS "/home/ahmed/tek/tek3/B-CPP-500-LYN-5-1-rtype-maxime.premont/docs/libs/ECS/ecsTests[1]_tests.cmake")
+  include("/home/ahmed/tek/tek3/B-CPP-500-LYN-5-1-rtype-maxime.premont/docs/libs/ECS/ecsTests[1]_tests.cmake")
+else()
+  add_test(ecsTests_NOT_BUILT ecsTests_NOT_BUILT)
+endif()

@@ -1,0 +1,36 @@
+name: Workflow Global
+
+on: [pull_request]
+
+jobs:
+  compilation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: Git configuration
+        shell: bash
+        run: |-
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+      - name: Get cmake
+        uses: lukka/get-cmake@latest
+      - name: Compile
+        run: |-
+          cmake -BUILD_SHARED_LIBS=OFF -S . -B build/
+          cd build
+          make
+      - name: Launch Server Tests
+        run: |-
+          cd build
+          ./networkTests
+      - name: Launch Client Tests
+        run: |-
+          cd build
+          ./clientTests
+      - name: Launch ECS Tests
+        run: |-
+          cd build
+          ./ecsTests

@@ -1,0 +1,19 @@
+Copyright 2022-2023 R-Type Enterprise and other R-Type Developers.
+
+Intellectual Property Notice
+----------------------------
+
+R-Type is licensed under the MIT License, (see LICENSE-MIT or http://opensource.org/licenses/MIT).
+
+Copyrights and patents in the R-Type project are retained
+by contributors.
+No copyright assignment is required to contribute to R-Type
+
+    SPDX-License-Identifier: (MIT)
+
+SPDX usage
+----------
+
+Individual files may contain SPDX tags instead of the full license text.
+This enables machine processing of license information based on the SPDX
+License Identifiers that are available here: https://spdx.org/licenses/

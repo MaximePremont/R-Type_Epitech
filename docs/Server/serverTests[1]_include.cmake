@@ -1,0 +1,5 @@
+if(EXISTS "/home/ahmed/tek/tek3/B-CPP-500-LYN-5-1-rtype-maxime.premont/docs/Server/serverTests[1]_tests.cmake")
+  include("/home/ahmed/tek/tek3/B-CPP-500-LYN-5-1-rtype-maxime.premont/docs/Server/serverTests[1]_tests.cmake")
+else()
+  add_test(serverTests_NOT_BUILT serverTests_NOT_BUILT)
+endif()

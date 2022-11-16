@@ -1,0 +1,15 @@
+[submodule "libs/SDL2"]
+	path = libs/SDL2
+	url = git@github.com:libsdl-org/SDL.git
+[submodule "libs/boost"]
+	path = libs/boost
+	url = git@github.com:boostorg/boost.git
+[submodule "libs/googletest"]
+	path = libs/googletest
+	url = git@github.com:google/googletest.git
+[submodule "libs/SDL_image"]
+	path = libs/SDL_image
+	url = https://github.com/libsdl-org/SDL_image.git
+[submodule "libs/SDL_mixer"]
+	path = libs/SDL_mixer
+	url = git@github.com:libsdl-org/SDL_mixer.git
